@@ -26,6 +26,8 @@ title = "Wildcard"
   # Show full page content in RSS feed items
   #(default is Description or Summary metadata in the front matter)
   # rssFullText = true
+  postSection = ["post"]
+  post_navigation = true
 
 [languages]
   [languages.en]
