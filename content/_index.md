@@ -1,10 +1,9 @@
 ---
 title: "Vijay Raj"
 ---
-I'm Vijay, a technical architect and engineering leader in Toronto. Fifteen-plus
-years designing systems across banking, retail, healthtech, crypto and IoT, and
-leading the teams that build them.
+I'm Vijay, an engineering manager and hands-on architect in Toronto. 17+ years
+in software, from BlackBerry Messenger to fintech, health and IoT platforms.
 
-On the side I build small products that solve real problems under
-[Renu Design](https://renudesign.com), and teach Python to young builders.
-I write here occasionally as *Wildcard*.
+I lead the Workflows and Portal squads at [OneVest](https://onevest.com), build
+small products under [Renu Design](https://renudesign.com), and teach Python to
+young builders. I write here occasionally as *Wildcard*.
