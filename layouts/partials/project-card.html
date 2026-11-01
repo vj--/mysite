@@ -1,9 +1,9 @@
+{{ $renu := "https://renudesign.com/#products" }}
 <div class="project">
-  <h3 class="project__name">{{ .name }}{{ with .org }} <span class="project__org">· {{ . }}</span>{{ end }}</h3>
+  <h3 class="project__name"><a href="{{ .url | default $renu }}">{{ .name }}</a></h3>
   <p class="project__summary">{{ .summary | markdownify }}</p>
-  {{ with .links }}
   <p class="project__links">
-    {{ range . }}<a href="{{ .url }}">{{ .label }} →</a>{{ end }}
+    {{ with .url }}<a href="{{ . }}">{{ replaceRE "^https?://(www\\.)?([^/]+).*$" "$2" . }} →</a>{{ end }}
+    <a href="{{ $renu }}">renudesign.com →</a>
   </p>
-  {{ end }}
 </div>
