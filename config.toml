@@ -1,9 +1,9 @@
 
-baseurl = "/"
+baseurl = "https://vijayraj.com/"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 10
-title = "Wildcard"
+title = "Vijay Raj"
 
 [params]
   # dir name of your blog content (default is `content/posts`).
@@ -14,7 +14,7 @@ title = "Wildcard"
   defaultTheme = "dark"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   # Show reading time in minutes for posts
   showReadingTime = true 
@@ -31,8 +31,8 @@ title = "Wildcard"
 
 [languages]
   [languages.en]
-    title = "Wildcard"
-    subtitle = "rambling's by vijay"
+    title = "Vijay Raj"
+    subtitle = "Software, products, and the occasional wildcard"
     keywords = "technology, random"
     copyright = ""
     menuMore = "Show more"
@@ -48,7 +48,7 @@ title = "Wildcard"
     # lastModDisplay = ""
 
     [languages.en.params.logo]
-      logoText = "hello "
+      logoText = "vijayraj"
       logoHomeLink = "/"
     # or
     #
@@ -57,9 +57,20 @@ title = "Wildcard"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "/projects"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts"
+        weight = 2
+      [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
         url = "/about"
+        weight = 3
       # [[languages.en.menu.main]]
       #  identifier = "showcase"
       #  name = "Showcase"

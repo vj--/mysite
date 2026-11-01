@@ -1,0 +1,12 @@
+# Single source of truth for the home page and /projects.
+# featured: true  -> also shown on the home page.
+# Add an entry per project; links render in the order given.
+- name: Heapr
+  summary: Home inventory app for iOS and Android. Catalog what you own and where it lives.
+  org: Renu Design
+  featured: true
+  links:
+    - label: renudesign.com
+      url: https://renudesign.com/#products
+    - label: heapr.app
+      url: https://heapr.app

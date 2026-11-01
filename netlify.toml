@@ -1,6 +1,8 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+# $URL is the site's primary domain on Netlify, so absolute links follow
+# whichever domain is set as primary (wildcard.icu now, vijayraj.com after).
+command = "hugo --gc --minify -b $URL"
 
 [context.production.environment]
 HUGO_VERSION = "0.80.0"
@@ -30,3 +32,24 @@ HUGO_VERSION = "0.80.0"
 HUGO_ENABLEGITINFO = "true"
 
 
+
+# Canonical domain is vijayraj.com. Every other hostname 301s to it.
+# Requires vijayraj.com to be the PRIMARY domain of this Netlify site first,
+# otherwise this loops with any old vijayraj.com -> wildcard.icu redirect.
+[[redirects]]
+from = "https://wildcard.icu/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.wildcard.icu/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.vijayraj.com/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true

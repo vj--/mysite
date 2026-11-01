@@ -1,7 +1,7 @@
 ---
 title: "Startup Ideas"
 date: 2023-01-24T17:44:50-05:00
-draft: false
+draft: true
 tags: [startup,ideas]
 ---
 There is a lot of content online on how to generate startup ideas. This video from YC summarizes it very well. 

@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="index-content home">
+    {{ .Content }}
+  </div>
+
+  {{ $featured := where .Site.Data.projects "featured" true }}
+  {{ with $featured }}
+  <section class="home-section">
+    <h2>Projects</h2>
+    {{ range . }}{{ partial "project-card.html" . }}{{ end }}
+    <p><a href="{{ "projects/" | relURL }}">All projects →</a></p>
+  </section>
+  {{ end }}
+
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ with $posts }}
+  <section class="home-section">
+    <h2>Writing</h2>
+    <ul class="post-list">
+      {{ range first 5 . }}
+      <li>
+        <span class="post-list__date">{{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}</span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    <p><a href="{{ "posts/" | relURL }}">All posts →</a></p>
+  </section>
+  {{ end }}
+{{ end }}
