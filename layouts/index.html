@@ -3,12 +3,14 @@
     {{ .Content }}
   </div>
 
-  {{ $featured := where .Site.Data.projects "featured" true }}
-  {{ with $featured }}
+  {{ with .Site.Data.projects }}
   <section class="home-section">
     <h2>Projects</h2>
-    {{ range . }}{{ partial "project-card.html" . }}{{ end }}
-    <p><a href="{{ "projects/" | relURL }}">All projects →</a></p>
+    <p class="home-section__lede">Things I've built under Renu Design.</p>
+    <div class="projects-grid">
+      {{ range . }}{{ partial "project-card.html" . }}{{ end }}
+    </div>
+    <p><a href="https://renudesign.com">All projects at Renu Design →</a></p>
   </section>
   {{ end }}
 

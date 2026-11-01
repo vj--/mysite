@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}">
+  <head>
+    {{ block "title" . }}
+      <title>
+        {{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} —
+        {{ . }}{{ end }}{{ else }}{{ .Title }} ::
+        {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}
+      </title>
+    {{ end }}
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <script>
+      // Follow the OS light/dark setting. Clear any choice saved by the old
+      // theme toggle so the theme's main.js doesn't override the system.
+      (function () {
+        try { localStorage.removeItem("theme"); } catch (e) {}
+        var mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+        if (!mq) return;
+        var apply = function () { document.body.classList.toggle("dark-theme", mq.matches); };
+        apply();
+        if (mq.addEventListener) mq.addEventListener("change", apply);
+        else if (mq.addListener) mq.addListener(apply);
+      })();
+    </script>
+    <div class="container">
+      {{ partial "header.html" . }}
+
+      <div class="content">
+        {{ block "main" . }} {{ end }}
+      </div>
+
+      {{ block "footer" . }}
+        {{ partial "footer.html" . }}
+      {{ end }}
+    </div>
+
+    {{ if $.Site.GoogleAnalytics }}
+      {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+  </body>
+</html>

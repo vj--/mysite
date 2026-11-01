@@ -1,9 +1,13 @@
-<div class="project">
-  <h3 class="project__name">{{ .name }}{{ with .org }} <span class="project__org">· {{ . }}</span>{{ end }}</h3>
+{{ $renu := printf "https://renudesign.com/#%s" (.renu | default "products") }}
+<article class="project">
+  <h3 class="project__name"><a href="{{ .url | default $renu }}">{{ .name }}</a></h3>
+  {{ with .tagline }}<p class="project__tagline">{{ . }}</p>{{ end }}
   <p class="project__summary">{{ .summary | markdownify }}</p>
-  {{ with .links }}
-  <p class="project__links">
-    {{ range . }}<a href="{{ .url }}">{{ .label }} →</a>{{ end }}
-  </p>
+  {{ with .tags }}
+  <ul class="project__tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
   {{ end }}
-</div>
+  <p class="project__links">
+    {{ with .url }}<a class="project__cta" href="{{ . }}">{{ $.cta | default (replaceRE "^https?://(www\\.)?([^/]+).*$" "$2" .) }} →</a>{{ end }}
+    <a href="{{ $renu }}">Renu Design →</a>
+  </p>
+</article>

@@ -1,9 +1,0 @@
-{{ define "main" }}
-  <div class="post">
-    <h1 class="post-title">{{ .Title }}</h1>
-    <div class="post-content">
-      {{ .Content }}
-      {{ range .Site.Data.projects }}{{ partial "project-card.html" . }}{{ end }}
-    </div>
-  </div>
-{{ end }}

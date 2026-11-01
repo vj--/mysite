@@ -2,14 +2,30 @@
 /* Home sections use the same column as .post: 800px, left-aligned. */
 .home, .home-section { width: 100%; max-width: 800px; text-align: left; padding: 0 20px; box-sizing: border-box; }
 .home { margin: 0 auto; }
-.home p { font-size: 1.1rem; line-height: 1.6; margin: 0; }
+.home p { font-size: 1.1rem; line-height: 1.6; margin: 0 0 1rem; }
 .home-section { margin: 2.5rem auto 0; }
 .home-section h2 { border-bottom: 1px solid rgba(128,128,128,.3); padding-bottom: .3rem; }
-.project { margin: 1.25rem 0; }
-.project__name { margin: 0 0 .25rem; }
-.project__org { font-weight: normal; opacity: .6; font-size: .9em; }
-.project__summary { margin: 0 0 .35rem; }
-.project__links a { margin-right: 1rem; }
-.post-list { list-style: none; padding: 0; }
+.home-section__lede { opacity: .75; margin: .5rem 0 1rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
+@media (max-width: 720px) { .projects-grid { grid-template-columns: 1fr; } }
+.project {
+  display: flex; flex-direction: column;
+  padding: 1.1rem 1.2rem; border: 1px solid var(--border-color); border-radius: 10px;
+  background: var(--background);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.project:hover { transform: translateY(-2px); border-color: var(--color-secondary); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.project__name { margin: 0; font-size: 1.2rem; }
+.project__name a { text-decoration: none; }
+.project__tagline { margin: .2rem 0 .5rem; font-weight: 600; }
+.project__summary { margin: 0 0 .75rem; font-size: .95rem; line-height: 1.55; opacity: .85; }
+.project__tags { list-style: none; padding: 0; margin: 0 0 .9rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.project__tags li { font-size: .75rem; padding: .1rem .55rem; border-radius: 999px; background: var(--background-secondary); }
+.project__links { margin: auto 0 0; display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+.project__cta { font-weight: 600; }
+.post-list { list-style: none; padding: 0; margin-left: 0; }
 .post-list li { margin: .4rem 0; }
 .post-list__date { opacity: .6; margin-right: .75rem; font-variant-numeric: tabular-nums; }
+/* No theme toggle: light/dark follows the OS setting. */
+.theme-toggle { display: none; }
+.menu { border-right: none; margin-right: 0; padding-right: 0; }

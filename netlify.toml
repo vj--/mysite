@@ -49,7 +49,26 @@ status = 301
 force = true
 
 [[redirects]]
+from = "https://sad-lumiere-ac0811.netlify.app/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
 from = "https://www.vijayraj.com/*"
 to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+# Projects live on renudesign.com; keep the old /projects URL working.
+[[redirects]]
+from = "/projects/*"
+to = "https://renudesign.com/#products"
+status = 301
+force = true
+
+[[redirects]]
+from = "/projects"
+to = "https://renudesign.com/#products"
 status = 301
 force = true
