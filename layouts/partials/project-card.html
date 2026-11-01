@@ -1,4 +1,4 @@
-{{ $renu := "https://renudesign.com/#products" }}
+{{ $renu := printf "https://renudesign.com/#%s" (.renu | default "products") }}
 <article class="project">
   <h3 class="project__name"><a href="{{ .url | default $renu }}">{{ .name }}</a></h3>
   {{ with .tagline }}<p class="project__tagline">{{ . }}</p>{{ end }}
