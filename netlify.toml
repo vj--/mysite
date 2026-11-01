@@ -30,3 +30,22 @@ HUGO_VERSION = "0.80.0"
 HUGO_ENABLEGITINFO = "true"
 
 
+
+# vijayraj.com is the primary domain; send everything else there.
+[[redirects]]
+from = "https://wildcard.icu/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.wildcard.icu/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://sad-lumiere-ac0811.netlify.app/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
