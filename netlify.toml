@@ -1,6 +1,8 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+# $URL is the site's primary domain on Netlify, so absolute links follow
+# whichever domain is set as primary (wildcard.icu now, vijayraj.com after).
+command = "hugo --gc --minify -b $URL"
 
 [context.production.environment]
 HUGO_VERSION = "0.80.0"

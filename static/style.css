@@ -1,0 +1,12 @@
+/* Overrides loaded after the theme CSS (see theme partials/head.html). */
+.home p { font-size: 1.1rem; line-height: 1.6; }
+.home-section { margin-top: 2.5rem; }
+.home-section h2 { border-bottom: 1px solid rgba(128,128,128,.3); padding-bottom: .3rem; }
+.project { margin: 1.25rem 0; }
+.project__name { margin: 0 0 .25rem; }
+.project__org { font-weight: normal; opacity: .6; font-size: .9em; }
+.project__summary { margin: 0 0 .35rem; }
+.project__links a { margin-right: 1rem; }
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin: .4rem 0; }
+.post-list__date { opacity: .6; margin-right: .75rem; font-variant-numeric: tabular-nums; }
