@@ -6,8 +6,11 @@
   {{ with .Site.Data.projects }}
   <section class="home-section">
     <h2>Projects</h2>
-    {{ range . }}{{ partial "project-card.html" . }}{{ end }}
-    <p><a href="https://renudesign.com">More at Renu Design →</a></p>
+    <p class="home-section__lede">Things I've built under Renu Design.</p>
+    <div class="projects-grid">
+      {{ range . }}{{ partial "project-card.html" . }}{{ end }}
+    </div>
+    <p><a href="https://renudesign.com">All projects at Renu Design →</a></p>
   </section>
   {{ end }}
 

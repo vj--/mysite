@@ -1,12 +1,52 @@
-# All projects are Renu Design products. Each renders as one card on the home
-# page. `url` is the project's own site (optional); every card also links to
-# renudesign.com. The name links to `url`, or to renudesign.com if there is none.
+# All projects are built by Renu Design. Each renders as one card on the home
+# page, in this order.
+#   tagline  one line, the hook
+#   summary  one or two sentences, what it does
+#   tags     short chips (platform, stack)
+#   url      the project's own site (optional). The name links here, or to
+#            renudesign.com when absent. Every card also links to renudesign.com.
+#   cta      label for the url link (defaults to the hostname)
+- name: Kanakku
+  tagline: The money book for your group.
+  summary: >-
+    For whoever books the courts and chases everyone at month end. Type what
+    happened ("4 birdies at 2.50"), confirm, and costs split fair to the cent.
+    One shared link shows every player their balance and why.
+  tags: [Web app, Cloudflare Workers]
+  url: https://app.kanakku.workers.dev
+  cta: Open Kanakku
+
+- name: Muster Hall
+  tagline: Take the roll. Then teach.
+  summary: >-
+    Attendance for teachers and instructors. One tap per student, tags and
+    notes, belts and ranks, and a weekly page that flags who's slipping before
+    they quietly stop coming.
+  tags: [Web app, Mobile-first]
+  url: https://musterhall.app
+  cta: musterhall.app
+
 - name: Heapr
-  summary: Home inventory app for iOS and Android. Catalog what you own and where it lives.
-  url: https://heapr.app
-- name: Tempo Metronome
-  summary: A clean, no-nonsense metronome for iOS.
-  url: https://github.com/vj--/tempo-metronome-support
+  tagline: Know what you own and where it lives.
+  summary: >-
+    Home inventory with photos, locations, categories and tags, and search
+    across everything.
+  tags: [iOS, Android]
+
+- name: Simple Tempo Metronome
+  tagline: Keep perfect time, nothing else.
+  summary: >-
+    A minimalist metronome with a swinging pendulum, drag-to-set tempo, haptic
+    beats and saved presets. Collects no data.
+  tags: [iOS, Swift]
+  url: https://apps.apple.com/ca/app/simple-tempo-metronome/id6757973064
+  cta: App Store
+
 - name: doit
-  summary: Kanban board for your terminal. Tasks live in a markdown file in a git repo you control, not a database.
+  tagline: Kanban for your terminal.
+  summary: >-
+    Your todos as a markdown file in a git repo you control. A keyboard-driven
+    board that commits every change. No database.
+  tags: [Go, TUI, Open source]
   url: https://github.com/vj--/doit
+  cta: GitHub
