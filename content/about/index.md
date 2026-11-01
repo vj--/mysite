@@ -8,7 +8,7 @@ draft: false
 
 I'm Vijay, a technical architect and engineering manager based in Toronto, with
 15+ years building systems across finance, retail, healthtech, crypto and IoT.
-I like simple solutions to complex problems, and I like teams that ship.
+I like simple solutions to complex problems.
 
 ### Work
 
@@ -25,8 +25,7 @@ I like simple solutions to complex problems, and I like teams that ship.
 ### Building
 
 I run [Renu Design](https://renudesign.com), a small studio for apps like
-[Heapr](https://heapr.app). I also teach Python to kids, which is the best code
-review I get all week.
+[Heapr](https://heapr.app). I also teach Python to young builders.
 
 ### Elsewhere
 
