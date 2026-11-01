@@ -49,6 +49,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "https://sad-lumiere-ac0811.netlify.app/*"
+to = "https://vijayraj.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
 from = "https://www.vijayraj.com/*"
 to = "https://vijayraj.com/:splat"
 status = 301

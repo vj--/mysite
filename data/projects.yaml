@@ -4,3 +4,9 @@
 - name: Heapr
   summary: Home inventory app for iOS and Android. Catalog what you own and where it lives.
   url: https://heapr.app
+- name: Tempo Metronome
+  summary: A clean, no-nonsense metronome for iOS.
+  url: https://github.com/vj--/tempo-metronome-support
+- name: doit
+  summary: Kanban board for your terminal. Tasks live in a markdown file in a git repo you control, not a database.
+  url: https://github.com/vj--/doit
