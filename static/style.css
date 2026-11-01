@@ -2,7 +2,7 @@
 /* Home sections use the same column as .post: 800px, left-aligned. */
 .home, .home-section { width: 100%; max-width: 800px; text-align: left; padding: 0 20px; box-sizing: border-box; }
 .home { margin: 0 auto; }
-.home p { font-size: 1.1rem; line-height: 1.6; margin: 0; }
+.home p { font-size: 1.1rem; line-height: 1.6; margin: 0 0 1rem; }
 .home-section { margin: 2.5rem auto 0; }
 .home-section h2 { border-bottom: 1px solid rgba(128,128,128,.3); padding-bottom: .3rem; }
 .project { margin: 1.25rem 0; }
