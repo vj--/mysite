@@ -6,8 +6,11 @@
 #   url      the project's own site (optional). The name links here, or to
 #            renudesign.com when absent. Every card also links to renudesign.com.
 #   cta      label for the url link (defaults to the hostname)
+#   logo     square logo image; else `initial` on a `color` tile
 #   renu     anchor of this product on renudesign.com (#kanakku etc.)
 - name: Kanakku
+  initial: "K"
+  color: "#C4784A"
   renu: kanakku
   tagline: The money book for your group.
   summary: >-
@@ -19,6 +22,7 @@
   cta: Open Kanakku
 
 - name: Muster Hall
+  logo: /img/projects/musterhall.svg
   renu: musterhall
   tagline: Take the roll. Then teach.
   summary: >-
@@ -30,6 +34,7 @@
   cta: musterhall.app
 
 - name: Heapr
+  logo: /img/projects/heapr.png
   renu: heapr
   tagline: Know what you own and where it lives.
   summary: >-
@@ -38,6 +43,8 @@
   tags: [iOS, Android]
 
 - name: Simple Tempo Metronome
+  initial: "T"
+  color: "#3F5C78"
   renu: tempo
   tagline: Keep perfect time, nothing else.
   summary: >-
@@ -48,6 +55,8 @@
   cta: App Store
 
 - name: doit
+  initial: "d"
+  color: "#4A4744"
   renu: doit
   tagline: Kanban for your terminal.
   summary: >-
