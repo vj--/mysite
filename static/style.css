@@ -15,7 +15,10 @@
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .project:hover { transform: translateY(-2px); border-color: var(--color-secondary); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-.project__name { margin: 0; font-size: 1.2rem; }
+.project__head { display: flex; align-items: center; gap: .75rem; margin-bottom: .35rem; }
+.project__icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; display: block; }
+.project__icon--initial { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.3rem; }
+.project__name { margin: 0; font-size: 1.2rem; line-height: 1.2; }
 .project__name a { text-decoration: none; }
 .project__tagline { margin: .2rem 0 .5rem; font-weight: 600; }
 .project__summary { margin: 0 0 .75rem; font-size: .95rem; line-height: 1.55; opacity: .85; }

@@ -1,6 +1,9 @@
 {{ $renu := printf "https://renudesign.com/#%s" (.renu | default "products") }}
 <article class="project">
-  <h3 class="project__name"><a href="{{ .url | default $renu }}">{{ .name }}</a></h3>
+  <div class="project__head">
+    {{ with .logo }}<img class="project__icon" src="{{ . | relURL }}" alt="{{ $.name }} logo" width="44" height="44">{{ else }}<span class="project__icon project__icon--initial" style="background: {{ $.color | default "#888" | safeCSS }}">{{ $.initial }}</span>{{ end }}
+    <h3 class="project__name"><a href="{{ .url | default $renu }}">{{ .name }}</a></h3>
+  </div>
   {{ with .tagline }}<p class="project__tagline">{{ . }}</p>{{ end }}
   <p class="project__summary">{{ .summary | markdownify }}</p>
   {{ with .tags }}
