@@ -44,7 +44,6 @@ body { background: var(--background); color: var(--color); }
 /* Header: forest band (the 30%) */
 .header { background: var(--header); }
 .logo, .menu a, .menu-trigger { color: var(--header-ink); }
-.menu-trigger path { fill: var(--header-ink); }
 .logo__text { font-family: var(--serif); font-size: 1.35rem; letter-spacing: -0.01em; }
 .logo__cursor { background: var(--pink); }
 .menu a:hover { text-decoration: underline; text-decoration-color: var(--pink); text-decoration-thickness: 2px; text-underline-offset: 4px; }
