@@ -56,7 +56,7 @@
 
 - name: doit
   initial: "d"
-  color: "#1E2A1F"
+  color: "#4A5A4B"
   renu: doit
   tagline: Kanban for your terminal.
   summary: >-

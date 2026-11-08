@@ -14,6 +14,7 @@
   --header: #FFFAEB;
   --surface: #FFFAEB;
   --color: #1E2A1F;
+  --ink: #1E2A1F;
   --color-secondary: #56634F;
   --border-color: #DDD0A4;
   --accent: var(--forest);
@@ -24,6 +25,7 @@ body.dark-theme {
   --header: #1B2C22;
   --surface: #1B2C22;
   --color: #F2E8C6;
+  --ink: #F2E8C6;
   --color-secondary: #B5AC8C;
   --border-color: #2F4836;
   --accent: #8FC79A;
@@ -33,7 +35,8 @@ body { background: var(--background); color: var(--color); }
 :focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
 
 .logo__cursor { background: var(--pink); }
-.logo, .menu a, .post-title a { color: var(--color); }
+.logo, .menu a, .post-title a { color: var(--ink); }
+.menu a:hover { color: var(--accent); }
 .post-content a, .home a, .project__links a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s; }
 .post-content a:hover, .home a:hover, .project__links a:hover { text-decoration-color: var(--pink); }
 .project__name a, .post-list a { color: var(--color); text-decoration: none; }
