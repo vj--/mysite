@@ -1,20 +1,63 @@
 /* Overrides loaded after the theme CSS (see theme partials/head.html). */
+
+/* ---- Palette: Butter Cream (base), Forest Green (accent), Hot Pink (rare) ----
+   Light = cream surfaces, forest ink. Dark = forest-black surfaces, cream ink.
+   Hot pink fails contrast as text on cream (2.3:1), so in light mode it is only
+   used for marks: cursor, hover underline, focus ring. */
+:root {
+  --cream: #F7EFD2;
+  --forest: #2C5F2D;
+  --pink: #FF69B4;
+
+  --background: var(--cream);
+  --background-secondary: #EDE2BA;
+  --header: #FFFAEB;
+  --surface: #FFFAEB;
+  --color: #1E2A1F;
+  --color-secondary: #56634F;
+  --border-color: #DDD0A4;
+  --accent: var(--forest);
+}
+body.dark-theme {
+  --background: #13201A;
+  --background-secondary: #24382B;
+  --header: #1B2C22;
+  --surface: #1B2C22;
+  --color: #F2E8C6;
+  --color-secondary: #B5AC8C;
+  --border-color: #2F4836;
+  --accent: #8FC79A;
+}
+body { background: var(--background); color: var(--color); }
+::selection { background: var(--pink); color: #1E2A1F; }
+:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
+
+.logo__cursor { background: var(--pink); }
+.logo, .menu a, .post-title a { color: var(--color); }
+.post-content a, .home a, .project__links a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+.post-content a:hover, .home a:hover, .project__links a:hover { text-decoration-color: var(--pink); }
+.project__name a, .post-list a { color: var(--color); text-decoration: none; }
+.project__name a:hover, .post-list a:hover { color: var(--accent); }
+h1, h2, h3 { color: var(--color); }
+.home-section h2 { border-bottom: 2px solid var(--accent); }
+blockquote { border-left: 3px solid var(--accent); }
+
 /* Home sections use the same column as .post: 800px, left-aligned. */
 .home, .home-section { width: 100%; max-width: 800px; text-align: left; padding: 0 20px; box-sizing: border-box; }
 .home { margin: 0 auto; }
 .home p { font-size: 1.1rem; line-height: 1.6; margin: 0 0 1rem; }
 .home-section { margin: 2.5rem auto 0; }
-.home-section h2 { border-bottom: 1px solid rgba(128,128,128,.3); padding-bottom: .3rem; }
+.home-section h2 { padding-bottom: .3rem; }
 .home-section__lede { opacity: .75; margin: .5rem 0 1rem; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
 @media (max-width: 720px) { .projects-grid { grid-template-columns: 1fr; } }
 .project {
   display: flex; flex-direction: column;
   padding: 1.1rem 1.2rem; border: 1px solid var(--border-color); border-radius: 10px;
-  background: var(--background);
+  background: var(--surface);
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
-.project:hover { transform: translateY(-2px); border-color: var(--color-secondary); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.project:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
 .project__head { display: flex; align-items: center; gap: .75rem; margin-bottom: .35rem; }
 .project__icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; display: block; }
 .project__icon--initial { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.3rem; }
