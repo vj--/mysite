@@ -10,7 +10,7 @@
 #   renu     anchor of this product on renudesign.com (#kanakku etc.)
 - name: Kanakku
   initial: "K"
-  color: "#C4784A"
+  color: "#1F3D2E"
   renu: kanakku
   tagline: The money book for your group.
   summary: >-
@@ -44,7 +44,7 @@
 
 - name: Simple Tempo Metronome
   initial: "T"
-  color: "#3F5C78"
+  color: "#1F3D2E"
   renu: tempo
   tagline: Keep perfect time, nothing else.
   summary: >-
@@ -56,7 +56,7 @@
 
 - name: doit
   initial: "d"
-  color: "#4A4744"
+  color: "#1F3D2E"
   renu: doit
   tagline: Kanban for your terminal.
   summary: >-
